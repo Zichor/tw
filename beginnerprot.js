@@ -5,7 +5,7 @@ if (window.location.href.indexOf('map') < 0) {
 
 serverTimeTemp = $("#serverDate")[0].innerText + " " + $("#serverTime")[0].innerText;
 serverTime = serverTimeTemp.match(/^([0][1-9]|[12][0-9]|3[01])[\/\-]([0][1-9]|1[012])[\/\-](\d{4})( (0?[0-9]|[1][0-9]|[2][0-3])[:]([0-5][0-9])([:]([0-5][0-9]))?)?$/);
-serverDate = Date.parse(serverTime[3] + "/" + serverTime[2] + "/" + serverTime[1] + serverTime[4]);
+serverDate = Date.parse(serverTime[4] + serverTime[3] + "/" + serverTime[2] + "/" + serverTime[1]);
 var beginnerProtection = [];
 allVillages = $.find('img');
 for (var i = 0; i < allVillages.length; i++) {
